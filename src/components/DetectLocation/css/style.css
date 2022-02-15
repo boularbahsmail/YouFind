@@ -6,6 +6,10 @@
   font-weight: 400;
 }
 
+.loading {
+  padding: 0 10px;
+}
+
 .success {
   display: none;
 }

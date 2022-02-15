@@ -8,13 +8,22 @@ import {
 } from "react-router-dom";
 
 // React Icons
-import { BsSearch } from 'react-icons/bs';
+import { BsSearch, BsMoon } from 'react-icons/bs';
 
 // Routes
 import Home from './routes/Home';
 import Find from './routes/Find';
 
 const App = () => {
+  // Switch Dark | Light Mode
+  const switchIt = () => {
+    var element = document.body;
+    element.classList.toggle("dark-mode");
+  };
+
+  // Get Current Year
+  const date = new Date();
+  const year = date.getFullYear();
   return (
     <Router>
       <div className="container">
@@ -26,14 +35,23 @@ const App = () => {
             </Link>
           </h2>
 
-          <Link to="/search" title="Search">
-            <BsSearch />
-          </Link>
+          <div className="right-item">
+            <Link to="/search" title="Search">
+              <BsSearch className="icon" />
+            </Link>
+
+            <button title="Switch to Dark | Light mode" onClick={switchIt} className="darklightmodeButton">
+              <BsMoon className="icon" />
+            </button>
+          </div>
         </header>
         <Routes>
             <Route exact path="/" element={<Home />}></Route>
             <Route exact path="/search" element={<Find />}></Route>
         </Routes>
+        <footer>
+          <h5>&copy; {year} - <span>You<span className="highlight">Find</span></span> - Made with ❤️ by <a href="">Ismailium</a></h5>
+        </footer>
       </div>
     </Router>
   );
