@@ -1,0 +1,9 @@
+.container .search form {
+  display: flex;
+}
+
+.container .search form input {
+  padding: 10px;
+  margin-right: 10px;
+  outline: none;
+}

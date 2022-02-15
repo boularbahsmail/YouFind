@@ -1,0 +1,11 @@
+.container .userLocation {
+  padding: 1px 0;
+}
+
+.container .userLocation .position h4 span {
+  font-weight: 400;
+}
+
+.success {
+  display: none;
+}
