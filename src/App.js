@@ -40,7 +40,7 @@ const App = () => {
               <BsSearch className="icon" />
             </Link>
 
-            <button title="Switch to Dark | Light mode" onClick={switchIt} className="darklightmodeButton">
+            <button title="Dark Mode | Light Mode" onClick={switchIt} className="darklightmodeButton">
               <BsMoon className="icon" />
             </button>
           </div>

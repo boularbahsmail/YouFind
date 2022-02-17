@@ -5,10 +5,10 @@ const FindLocation = () => {
     return (
         <>
             <div className="search">
-                <h2>Go to :</h2>
+                <h2>Type an address</h2>
                 <form>
                     <input type="text" placeholder="Address" required />
-                    <button>Search</button>
+                    <button title="Search">Search</button>
                 </form>
             </div>
         </>

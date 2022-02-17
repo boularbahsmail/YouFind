@@ -13,8 +13,7 @@ const DetectLocation = () => {
     // Get User Position
     const getPosition = () => {
         if ("geolocation" in navigator) {
-            console.log("Available");
-            console.log(navigator.geolocation);
+            console.log("Geolocation supported!");
             navigator.geolocation.getCurrentPosition(function(position) {
                 const userLatitude = position.coords.latitude;
                 const userLongitude = position.coords.longitude;
@@ -39,6 +38,7 @@ const DetectLocation = () => {
                 loadingSuccess();
             });
         } else {
+          console.log("Geolocation not supported!");
             console.log("Not Available");
             const content = `
                 <div>
